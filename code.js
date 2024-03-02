@@ -1,6 +1,6 @@
 // COSC3020 Graph Search Exercise
 // Noah Mulvaney, nmulvane@uwyo.edu
-// 28 Feb 2024
+// 1 Mar 2024
 
 // Depth First Search of Graph (Adjacency Matrix)
 function depthFirstSearch(graph, start, target) {
@@ -24,7 +24,7 @@ function depthFirstSearch(graph, start, target) {
 
         // select next vertex
         i = visit.pop();
-        if (i == undefined) return [];
+        if (i == undefined) return []; // stack exhausted, not path found
     }
     path.push(target);
 
@@ -38,8 +38,3 @@ function depthFirstSearch(graph, start, target) {
 
     return(dir_path);
 }
-
-
-for (let i = 0; i < 5; i++)
-    for (let j = 0; j < 5; j++)
-        console.log("start:", i, "end:", j, "Result:", depthFirstSearch([[0,1,1,1,0],[0,0,0,1,0],[0,0,0,0,0],[0,0,1,0,1],[0,1,0,0,0]], i, j));
