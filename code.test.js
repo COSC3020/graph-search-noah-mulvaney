@@ -27,6 +27,8 @@ const test =
         }
         
         let size = mat[0].length;
+        if (size < 1) return true; // no further tests
+
         let start = Math.floor(Math.random() * size);
         let end = Math.floor(Math.random() * size);
 
@@ -39,6 +41,6 @@ const test =
         for (let i = 1; i < path.length; i++)
             if (mat[path[i - 1]][path[i]] != 1) return false;
 
-        return true
+        return true;
     });
 jsc.assert(test, { tests: 1000 });
