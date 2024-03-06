@@ -27,12 +27,12 @@ const test =
         }
         
         let size = mat[0].length;
-        if (size < 1) return true; // no further tests
 
         let start = Math.floor(Math.random() * size);
         let end = Math.floor(Math.random() * size);
 
         let path = depthFirstSearch(mat, start, end);
+        if (path == []) return true; // no further tests
 
         // check correct start and end
         if (path[0] != start || path[-1] != end) return false;
