@@ -32,10 +32,12 @@ const test =
         let end = Math.floor(Math.random() * size);
 
         let path = depthFirstSearch(mat, start, end);
+        let last = path.length - 1;
+        
         if (path == []) return true; // no further tests
 
         // check correct start and end
-        if (path[0] != start || path[-1] != end) return false;
+        if (path[0] != start || path[last] != end) return false;
 
         // check if path is connected
         for (let i = 1; i < path.length; i++)
