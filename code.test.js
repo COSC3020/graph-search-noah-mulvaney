@@ -27,6 +27,7 @@ const test =
         }
         
         let size = mat[0].length;
+        if (size == undefined || size == 0) return true;
 
         let start = Math.floor(Math.random() * size);
         let end = Math.floor(Math.random() * size);
