@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/M24O3lId)
 # Search in Graphs
 
 Recall the pseudocode for Depth-First Search:
@@ -25,6 +26,10 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+### Depth First Search Analysis
+
+The primary search part of my implementation (code.js:18-29) consists of two loops. The first loop runs a constant fraction of the number of vertices as it iterates over the vertices until the target node is found. The second loop iterates over the number vertices, checking each for its edges. This results in an asymptotic complexity of $|V|^2$.
 
 ## Bonus
 
