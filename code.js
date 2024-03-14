@@ -38,3 +38,5 @@ function depthFirstSearch(graph, start, target) {
 
     return(dir_path);
 }
+
+module.exports = {depthFirstSearch};
