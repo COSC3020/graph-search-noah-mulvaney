@@ -27,6 +27,10 @@ the function and run automatically when you commit through a GitHub action.
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
+### Depth First Search Analysis
+
+The primary search part of my implementation (code.js:18-29) consists of two loops. The first loop runs a constant fraction of the number of vertices as it iterates over the vertices until the target node is found. The second loop iterates over the number vertices, checking each for its edges. This results in an asymptotic complexity of $|V|^2$.
+
 ## Bonus
 
 Implement and analyze breadth-first search.
